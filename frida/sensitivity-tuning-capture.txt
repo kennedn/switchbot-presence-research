@@ -1,0 +1,2756 @@
+     ____
+    / _  |   Frida 17.7.3 - A world-class dynamic instrumentation toolkit
+   | (_| |
+    > _  |   Commands:
+   /_/ |_|       help      -> Displays the help system
+   . . . .       object?   -> Display information about 'object'
+   . . . .       exit/quit -> Exit
+   . . . .
+   . . . .   More info at https://frida.re/docs/home/
+   . . . .
+   . . . .   Connected to Jelly2 (id=JELLY20000030775)
+Spawning `com.theswitchbot.switchbot`...
+Spawned `com.theswitchbot.switchbot`. Resuming main thread!
+[Jelly2::com.theswitchbot.switchbot ]-> [+] Hooked BluetoothGatt.writeCharacteristic(BluetoothGattCharacteristic)
+[+] Hooked BluetoothGatt.readCharacteristic(BluetoothGattCharacteristic)
+[+] Hooked BluetoothGatt.setCharacteristicNotification(ch, boolean)
+[+] Hooked BluetoothGatt.writeDescriptor(BluetoothGattDescriptor)
+[+] Hooked WoBleClient.i0([B, int)
+[+] Hooked WoBleClient.p0([B, int, LongAckSupport)
+[+] Hooked WoBleClient.o0([B)
+[+] Hooked WoBleClient.t0(Function2)
+[+] Hooked WoBleGattCallback.U6(gatt, ch)
+[+] Hooked WoBleGattCallback.t7(..., Data)
+[+] Hooked WoBleGattCallback.u7(..., Data)
+[+] Hooked WoBleManager.L(String, [B)
+[+] Hooked WriteRequest.U(int)
+[+] Loaded: GATT TX/CFG + WoBle TX/RX + Nordic chunking + DEM full static state dump on e/p
+[+] Hooked SecretKeySpec.<init>([B,String) filtered (NO DEDUPE)
+[+] Hooked IvParameterSpec.<init>([B) filtered (NO DEDUPE)
+[+] Hooked Cipher.doFinal([B) filtered (NO DEDUPE)
+[+] Loaded: filtered key + iv + CTR doFinal hooks (NO DEDUPE)
+
+[GATT CFG] mac=B0:E9:FE:99:6A:D7 setCharacteristicNotification uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b enable=true
+
+[GATT CFG] mac=B0:E9:FE:99:6A:D7 writeDescriptor ch_uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b desc_uuid=00002902-0000-1000-8000-00805f9b34fb len=2
+  data=0100
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=10 hex=09010000000069a379c2
+  OUT len=10 hex=3dc67103dfa02c884e99
+
+[Nordic TX CHUNK] U mtu=23 len=14
+  data=57b91ed13dc67103dfa02c884e99
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=14
+  data=57b91ed13dc67103dfa02c884e99
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=4
+  data=01b91ed1
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=0 hex=
+  OUT len=0 hex=
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=1 hex=02
+  OUT len=1 hex=36
+
+[Nordic TX CHUNK] U mtu=23 len=5
+  data=57b91ed136
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=5
+  data=57b91ed136
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=01b91ed162ca7003
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=4 hex=62ca7003
+  OUT len=4 hex=560d0100
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7781
+  OUT len=3 hex=3bb0f0
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb0f0
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb0f0
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=16
+  data=01b91ed162ca6403dfaf452b35fbf96d
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=12 hex=62ca6403dfaf452b35fbf96d
+  OUT len=12 hex=560d1500000f000002a00320
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7781
+  OUT len=3 hex=3bb0f0
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb0f0
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb0f0
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=16
+  data=01b91ed162ca6403dfaf452b35fff96d
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=12 hex=62ca6403dfaf452b35fff96d
+  OUT len=12 hex=560d1500000f000002a40320
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7781
+  OUT len=3 hex=3bb0f0
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb0f0
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb0f0
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=16
+  data=01b91ed162ca6403dfaf452b35f0f96d
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=12 hex=62ca6403dfaf452b35f0f96d
+  OUT len=12 hex=560d1500000f000002ab0320
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=4 hex=0f770401
+  OUT len=4 hex=3bb07502
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=57b91ed13bb07502
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=57b91ed13bb07502
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed1343d
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=343d
+  OUT len=2 hex=00fa
+
+[Jelly2::com.theswitchbot.switchbot ]-> 
+[Jelly2::com.theswitchbot.switchbot ]-> 
+[Jelly2::com.theswitchbot.switchbot ]-> 
+[Jelly2::com.theswitchbot.switchbot ]-> 
+[Jelly2::com.theswitchbot.switchbot ]-> 
+[Jelly2::com.theswitchbot.switchbot ]-> 
+[Jelly2::com.theswitchbot.switchbot ]-> 
+[Jelly2::com.theswitchbot.switchbot ]-> 
+[Jelly2::com.theswitchbot.switchbot ]-> 
+[Jelly2::com.theswitchbot.switchbot ]-> 
+[Jelly2::com.theswitchbot.switchbot ]-> 
+[Jelly2::com.theswitchbot.switchbot ]-> 
+[Jelly2::com.theswitchbot.switchbot ]-> 
+[Jelly2::com.theswitchbot.switchbot ]-> 
+[Jelly2::com.theswitchbot.switchbot ]-> 
+[Jelly2::com.theswitchbot.switchbot ]-> 
+[Jelly2::com.theswitchbot.switchbot ]-> 
+[Jelly2::com.theswitchbot.switchbot ]-> 
+[Jelly2::com.theswitchbot.switchbot ]-> 
+[Jelly2::com.theswitchbot.switchbot ]-> 
+[Jelly2::com.theswitchbot.switchbot ]-> 
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=7 hex=0f760101000f20
+  OUT len=7 hex=3bb17002dfaf65
+
+[Nordic TX CHUNK] U mtu=23 len=11
+  data=57b91ed13bb17002dfaf65
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=11
+  data=57b91ed13bb17002dfaf65
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=4
+  data=01b91ed1
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed134c5
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=34c5
+  OUT len=2 hex=0002
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=3 hex=0f7701
+  OUT len=3 hex=3bb070
+
+[Nordic TX CHUNK] U mtu=23 len=7
+  data=57b91ed13bb070
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=7
+  data=57b91ed13bb070
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=6
+  data=01b91ed135c4
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=2 hex=35c4
+  OUT len=2 hex=0103
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f77030100
+  OUT len=5 hex=3bb07202df
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07202df
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07202df
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed134c60a0248a1cd2a885a3a4cf1c5ac
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=34c60a0248a1cd2a885a3a4cf1c5ac
+  OUT len=15 hex=00017b0197018801bf01c0016c0170
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f77030101
+  OUT len=5 hex=3bb07202de
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07202de
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07202de
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed135c6e90277a1902ac75a164c37c558
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=35c6e90277a1902ac75a164c37c558
+  OUT len=15 hex=01019801a801d501f001ec01aa0184
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f77030102
+  OUT len=5 hex=3bb07202dd
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07202dd
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07202dd
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed136c6f7025da1242a685ab24cf9c556
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=36c6f7025da1242a685ab24cf9c556
+  OUT len=15 hex=02018601820161015f01480164018a
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f77030103
+  OUT len=5 hex=3bb07202dc
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07202dc
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07202dc
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed137c6160289a1222a9b5a5a4c15c55f
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=37c6160289a1222a9b5a5a4c15c55f
+  OUT len=15 hex=0301670156016701ac01a001880183
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f77030104
+  OUT len=5 hex=3bb07202db
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07202db
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07202db
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed130c61002b2a1172a775adf4cd7c597
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=30c61002b2a1172a775adf4cd7c597
+  OUT len=15 hex=040161016d015201400125014a014b
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f77030105
+  OUT len=5 hex=3bb07202da
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07202da
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07202da
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed131c63c029ba1742a5d5abe4cf8c599
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=31c63c029ba1742a5d5abe4cf8c599
+  OUT len=15 hex=05014d01440131016a014401650145
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f77030106
+  OUT len=5 hex=3bb07202d9
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07202d9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07202d9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed132c62f02e4a17d2a705ade4cb8c5ef
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=32c62f02e4a17d2a705ade4cb8c5ef
+  OUT len=15 hex=06015e013b01380147012401250133
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f77030107
+  OUT len=5 hex=3bb07202d8
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07202d8
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07202d8
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed133c645029aa1092a0b5aac4cd8c5e7
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=33c645029aa1092a0b5aac4cd8c5e7
+  OUT len=15 hex=0701340145014c013c01560145013b
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f77030108
+  OUT len=5 hex=3bb07202d7
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07202d7
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07202d7
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed13cc65b02eca1722a735abe4cddc5e3
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=3cc65b02eca1722a735abe4cddc5e3
+  OUT len=15 hex=08012a01330137014401440140013f
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f77030109
+  OUT len=5 hex=3bb07202d6
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07202d6
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07202d6
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed13dc64202c6a15f2a3a5af04cb7c5e9
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=3dc64202c6a15f2a3a5af04cb7c5e9
+  OUT len=15 hex=0901330119011a010d010a012a0135
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f7703010a
+  OUT len=5 hex=3bb07202d5
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07202d5
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07202d5
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed13ec65c02fca1792a2b5ace4cdbc5e9
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=3ec65c02fca1792a2b5ace4cdbc5e9
+  OUT len=15 hex=0a012d0123013c011c013401460135
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f7703010b
+  OUT len=5 hex=3bb07202d4
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07202d4
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07202d4
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed13fc66802f0a17d2a1f5ad44c80c5ea
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=3fc66802f0a17d2a1f5ad44c80c5ea
+  OUT len=15 hex=0b0119012f01380128012e011d0136
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f7703010c
+  OUT len=5 hex=3bb07202d3
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07202d3
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07202d3
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed138c63002e4a1632a105ad64cb2c5d3
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=38c63002e4a1632a105ad64cb2c5d3
+  OUT len=15 hex=0c0141013b01260127012c012f010f
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f7703010d
+  OUT len=5 hex=3bb07202d2
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07202d2
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07202d2
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed139c65302eaa16e2a135ab84d9dc4dc
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=39c65302eaa16e2a135ab84d9dc4dc
+  OUT len=15 hex=0d01220135012b0124014200000000
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f77030300
+  OUT len=5 hex=3bb07200df
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07200df
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07200df
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed134c62b02aca1242aac5a604ca2c593
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=34c62b02aca1242aac5a604ca2c593
+  OUT len=15 hex=00015a01730161019b019a013f014f
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f77030301
+  OUT len=5 hex=3bb07200de
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07200de
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07200de
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed135c6030250a1f02af05a3c4c19c5bc
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=35c6030250a1f02af05a3c4c19c5bc
+  OUT len=15 hex=010172018f01b501c701c601840160
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f77030302
+  OUT len=5 hex=3bb07200dd
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07200dd
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07200dd
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed136c626028ca17d2a035adc4ca3c5bc
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=36c626028ca17d2a035adc4ca3c5bc
+  OUT len=15 hex=0201570153013801340126013e0160
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f77030303
+  OUT len=5 hex=3bb07200dc
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07200dc
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07200dc
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed137c64f02f1a17e2a625abf4cb1c5ef
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=37c64f02f1a17e2a625abf4cb1c5ef
+  OUT len=15 hex=03013e012e013b01550145012c0133
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f77030304
+  OUT len=5 hex=3bb07200db
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07200db
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07200db
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed130c66b02c0a1552a3b5afc4c83c5c4
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=30c66b02c0a1552a3b5afc4c83c5c4
+  OUT len=15 hex=04011a011f0110010c0106011e0118
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f77030305
+  OUT len=5 hex=3bb07200da
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07200da
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07200da
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed131c66102d2a1412a025af54cafc5cf
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=31c66102d2a1412a025af54cafc5cf
+  OUT len=15 hex=050110010d01040135010f01320113
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f77030306
+  OUT len=5 hex=3bb07200d9
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07200d9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07200d9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed132c65d02c8a1572a2b5b054c98c432
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=32c65d02c8a1572a2b5b054c98c432
+  OUT len=15 hex=06012c01170112011c00ff010500ee
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f77030307
+  OUT len=5 hex=3bb07200d8
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07200d8
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07200d8
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed133c79d0333a0be2bc55b0f4d64c432
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=33c79d0333a0be2bc55b0f4d64c432
+  OUT len=15 hex=0700ec00ec00fb00f200f500f900ee
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f77030308
+  OUT len=5 hex=3bb07200d7
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07200d7
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07200d7
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed13cc795032ba0a82bc85afa4d67c5de
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=3cc795032ba0a82bc85afa4d67c5de
+  OUT len=15 hex=0800e400f400ed00ff010000fa0102
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f77030309
+  OUT len=5 hex=3bb07200d6
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07200d6
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07200d6
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed13dc780033da09f2be95b1a4d7fc437
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=3dc780033da09f2be95b1a4d7fc437
+  OUT len=15 hex=0900f100e200da00de00e000e200eb
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f7703030a
+  OUT len=5 hex=3bb07200d5
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07200d5
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07200d5
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed13ec788032da0af2be05b234d7fc407
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=3ec788032da0af2be05b234d7fc407
+  OUT len=15 hex=0a00f900f200ea00d700d900e200db
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f7703030b
+  OUT len=5 hex=3bb07200d4
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07200d4
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07200d4
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed13fc79b0304a09e2be45b2d4d46c400
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=3fc79b0304a09e2be45b2d4d46c400
+  OUT len=15 hex=0b00ea00db00db00d300d700db00dc
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f7703030c
+  OUT len=5 hex=3bb07200d3
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07200d3
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07200d3
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed138c791033ba0912bea5b2d4d44c412
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=38c791033ba0912bea5b2d4d44c412
+  OUT len=15 hex=0c00e000e400d400dd00d700d900ce
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=5 hex=0f7703030d
+  OUT len=5 hex=3bb07200d2
+
+[Nordic TX CHUNK] U mtu=23 len=9
+  data=57b91ed13bb07200d2
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=9
+  data=57b91ed13bb07200d2
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=19
+  data=01b91ed139c7a80309a09e2bdb5b104d9dc4dc
+
+[Nordic TX CHUNK] U mtu=23 len=8
+  data=570000000f2103b9
+
+[GATT TX WRITE] mac=B0:E9:FE:99:6A:D7 uuid=cba20002-224d-11e6-9fb8-0002a5d5c51b len=8
+  data=570000000f2103b9
+
+[WoBleGattCallback RX] mac=B0:E9:FE:99:6A:D7 uuid=cba20003-224d-11e6-9fb8-0002a5d5c51b len=20
+  data=010000001ed1f6f6cf519226b1ecdd9b7441f534
+
+[JCA KEY] SecretKeySpec algo=AES len=16 key=fc13017a6d6cc5a6cc5489b181f0e81e
+
+[JCA IV] IvParameterSpec len=16 iv=1ed1f6f6cf519226b1ecdd9b7441f534
+
+[CTR] doFinal alg=AES/CTR/NoPadding
+  IN  len=15 hex=39c7a80309a09e2bdb5b104d9dc4dc
+  OUT len=15 hex=0d00d900d600db00ec00ea00000000
