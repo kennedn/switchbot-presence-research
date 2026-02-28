@@ -1,6 +1,6 @@
 # SwitchBot BLE Protocol Research
 
-This repo contains notes and tooling used to capture and document portions of the SwitchBot Android app’s BLE protocol, with a focus on the IV/key negotiation and calibration/table-read behaviors observed during “calibration” flows.
+This repo contains notes and tooling used to capture and document portions of the SwitchBot Android app’s BLE protocol for the mmwave presence sensor
 
 ## Repository Layout
 
@@ -24,10 +24,10 @@ This repo contains notes and tooling used to capture and document portions of th
 
 ## Requirements
 
-- Python 3.x
+- uv
 - `frida` + `frida-tools`
 - Android device with USB debugging enabled
-- BLE adapter / permissions as required by your platform (for the Python sniffing scripts)
+- Bluetooth adapter
 
 ## Capturing With Frida
 
